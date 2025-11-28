@@ -246,8 +246,12 @@ input[type="number"]:focus {
 
 @media (max-width: 768px) {
 
+    nav {
+        font-size: 1.3rem;
+    }
+
     .logo {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .glass-card {
@@ -257,13 +261,13 @@ input[type="number"]:focus {
     }
 
     h2, h3 {
-        font-size: 1.3rem;
+        font-size: 1.8rem;
         line-height: 1.4;
     }
 
     .options-list button {
         padding: 14px;
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin: 10px 0;
     }
 
