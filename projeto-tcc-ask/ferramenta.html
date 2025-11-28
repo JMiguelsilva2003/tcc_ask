@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>ASK - Diagnóstico Digital</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/ferramenta.css">
+</head>
+<body>
+    <div class="bg-code"></div>
+
+    <nav>
+        <div class="logo">ASK <span>Metodologia</span></div>
+        <a href="index.html" style="color:#aaa; text-decoration:none;">Voltar para Home</a>
+    </nav>
+
+    <div class="container-tool">
+        <div class="glass-card">
+            
+            <div id="quiz-container" class="fade-in">
+                <div class="progress-bar"><div class="fill" id="progress"></div></div>
+                <h2 id="pergunta-titulo">Carregando pergunta...</h2>
+                <div class="options-list" id="opcoes-container">
+                    </div>
+            </div>
+
+            <div id="result-container" class="fade-in" style="display:none;">
+                <h2>DIAGNÓSTICO CONCLUÍDO</h2>
+                <p>Com base nas suas respostas, destacamos o plano ideal:</p>
+
+                <div class="plan-selector">
+                    <div class="lines-connector"></div>
+
+                    <div class="plan-badge" id="badge-basico" onclick="selecionarPlanoFinal('basico')">
+                        <span class="plan-name">PLANO BÁSICO</span>
+                        <span class="plan-price">R$ 350</span>
+                    </div>
+
+                    <div class="plan-badge center-badge" id="badge-intermed" onclick="selecionarPlanoFinal('intermed')">
+                        <span class="plan-name">PLANO INTERMEDIÁRIO</span>
+                        <span class="plan-price">R$ 650</span>
+                        <div class="rec-label">RECOMENDADO</div>
+                    </div>
+
+                    <div class="plan-badge" id="badge-premium" onclick="selecionarPlanoFinal('premium')">
+                        <span class="plan-name">PLANO PREMIUM</span>
+                        <span class="plan-price">R$ 900</span>
+                    </div>
+                </div>
+
+                <p style="margin-top:20px; font-size:0.9rem; color:#aaa;">Clique em qualquer plano acima para ver a projeção de ROI.</p>
+            </div>
+
+            <div id="roi-container" class="fade-in" style="display:none; margin-top:40px; border-top:1px solid #333; padding-top:20px;">
+                <h3>PROJEÇÃO DE RESULTADOS (6 Meses)</h3>
+                
+                <div class="calc-layout">
+                    <div class="input-area">
+                        <label>Seu Investimento Mensal (R$)</label>
+                        <input type="number" id="investimentoInput" placeholder="Digite um valor..." step="50">
+                        <p style="font-size:0.8rem; color:#888;">*Você pode editar este valor para simular outros cenários.</p>
+    
+                        <div class="btn-whatsapp">
+                            <button onclick="enviarWhatsapp()">CONTRATAR ESSE PLANO VIA WHATSAPP <i class="fab fa-whatsapp"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="result-area">
+                        <p>LUCRO LÍQUIDO ESTIMADO:</p>
+                        <h2 id="roi-valor" class="glow-text">R$ 0,00</h2>
+                        <p>ROI (Retorno): <span id="roi-percent" style="color:var(--neon-green)">0%</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

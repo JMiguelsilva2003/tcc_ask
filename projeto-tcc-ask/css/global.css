@@ -1,0 +1,100 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+:root {
+    --bg-dark: #020b1c;
+    --neon-blue: #00d4ff;
+    --neon-green: #00ff88;
+    --neon-orange: #ffaa00;
+    --text-white: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    background-image: radial-gradient(circle at 50% 0%, #0a2e5c 0%, #020b1c 70%);
+    color: var(--text-white);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.bg-code {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../fundo.png');
+    opacity: 0.1;
+    z-index: -1;
+    pointer-events: none;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-white);
+}
+
+.logo span { color: var(--neon-blue); }
+
+.menu a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.menu a:hover { color: var(--neon-blue); }
+
+.btn-nav {
+    border: 1px solid var(--neon-blue);
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: var(--neon-blue) !important;
+}
+
+.btn-nav:hover {
+    background: var(--neon-blue);
+    color: #000 !important;
+}
+
+/* Animações de Scroll */
+.animate-up {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
