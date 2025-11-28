@@ -147,28 +147,14 @@ function calcularROI(valorInput) {
     document.getElementById('roi-percent').innerText = "+41,66%";
 }
 
-/* WHATSAPP */
 function enviarWhatsapp() {
     const numero = window.ASK_CONFIG ? window.ASK_CONFIG.WHATSAPP : ""; 
-
     let valor = document.getElementById('investimentoInput').value;
     let msg = `Olá! Fiz a simulação no site da ASK com um investimento de R$ ${valor} e gostaria de saber mais sobre a consultoria.`;
-
     window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
-/* MENU MOBILE */
 function toggleMenu() {
     const menu = document.getElementById('nav-menu');
-    const icon = document.querySelector('.mobile-menu-icon i');
-    
     menu.classList.toggle('open');
-    
-    if (menu.classList.contains('open')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-    } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    }
 }
