@@ -1,0 +1,245 @@
+.container-tool {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    padding: 20px;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: var(--glass-border);
+    border-radius: 24px;
+    padding: 50px;
+    width: 900px;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* QUIZ */
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255,255,255,0.1);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: var(--neon-blue);
+    width: 0%;
+    transition: width 0.5s ease;
+    box-shadow: 0 0 10px var(--neon-blue);
+}
+
+.options-list button {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 15px 0;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: left;
+}
+
+.options-list button:hover {
+    background: rgba(0, 212, 255, 0.15);
+    border-color: var(--neon-blue);
+    transform: translateX(10px);
+}
+
+.plan-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.lines-connector {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: rgba(255,255,255,0.1);
+    z-index: 0;
+}
+
+.plan-badge {
+    width: 200px;
+    height: 160px;
+    background: #0f172a;
+    border: 2px solid #334155;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+}
+
+.plan-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #94a3b8;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.plan-price {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+}
+
+.plan-badge:hover {
+    border-color: white;
+    transform: translateY(-5px);
+}
+
+/* Estados Ativos */
+.plan-badge.highlight-orange {
+    border: 3px solid var(--neon-orange);
+    box-shadow: 0 0 30px rgba(255, 170, 0, 0.3);
+    transform: scale(1.1);
+}
+.plan-badge.highlight-orange .plan-name { color: var(--neon-orange); }
+
+.plan-badge.highlight-blue {
+    border: 3px solid var(--neon-blue);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+    transform: scale(1.1);
+}
+.plan-badge.highlight-blue .plan-name { color: var(--neon-blue); }
+
+.plan-badge.highlight-green {
+    border: 3px solid var(--neon-green);
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+    transform: scale(1.1);
+}
+.plan-badge.highlight-green .plan-name { color: var(--neon-green); }
+
+.rec-label {
+    position: absolute;
+    bottom: -12px;
+    background: var(--neon-orange);
+    color: black;
+    font-size: 0.7rem;
+    padding: 4px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    display: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.highlight-orange .rec-label { display: block; }
+
+/* CALCULADORA ROI */
+.calc-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.input-area label {
+    display: block;
+    margin-bottom: 10px;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 18px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid #475569;
+    color: white;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.1);
+}
+
+.btn-whatsapp button {
+    width: 100%;
+    padding: 18px;
+    background: #25D366;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-whatsapp button:hover {
+    background: #1ebc57;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+}
+
+.result-area {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.result-area p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.glow-text {
+    color: var(--neon-green);
+    font-size: 3rem;
+    text-shadow: 0 0 20px rgba(0,255,136,0.2);
+    margin-bottom: 20px;
+}
+
+/* Animações */
+.fade-in { animation: fadeIn 0.8s ease-in-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .plan-selector { flex-direction: column; gap: 20px; }
+    .lines-connector { display: none; }
+    .calc-layout { grid-template-columns: 1fr; }
+    .glass-card { padding: 30px 20px; }
+}
