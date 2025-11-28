@@ -239,6 +239,86 @@ input[type="number"]:focus {
 .bg-code {
     background-size: none !important;
 }
+@media (max-height: 700px) {
+    
+    nav {
+        font-size: 1.3rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .glass-card {
+        width: 100%;
+        border-radius: 18px;
+    }
+
+    h2, h3 {
+        font-size: 1.8rem;
+        line-height: 1.4;
+    }
+
+    .options-list button {
+        font-size: 1.2rem;
+    }
+
+    .plan-selector {
+        flex-direction: column;
+        gap: 18px;
+        margin-top: 30px;
+    }
+
+    .plan-badge {
+        width: 100%;
+        max-width: 260px;
+        height: 130px;
+        border-radius: 16px;
+    }
+
+    .plan-name {
+        font-size: 0.8rem;
+        margin-bottom: 6px;
+    }
+
+    .plan-price {
+        font-size: 1.4rem;
+    }
+
+    .rec-label {
+        bottom: -10px;
+        font-size: 0.6rem;
+    }
+
+    .calc-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 25px;
+    }
+
+    input[type="number"] {
+        font-size: 1.2rem;
+        padding: 14px;
+    }
+
+    .result-area {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .glow-text {
+        font-size: 2.2rem;
+    }
+
+    .btn-whatsapp button {
+        font-size: 0.9rem;
+        padding: 14px;
+    }
+
+    .container-tool {
+        padding: 10px;
+    }
+}
 
 @media (max-width: 900px) {
 
