@@ -13,12 +13,18 @@
 
     <nav class="animate-up">
         <div class="logo">ASK <span>Consultoria</span></div>
-        <div class="menu">
-            <a href="#metodologia">Metodologia</a>
-            <a href="#servicos">Planos</a>
-            <a href="#depoimentos">Resultados</a>
+        
+        <div class="mobile-menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="menu" id="nav-menu">
+            <a href="#metodologia" onclick="toggleMenu()">Metodologia</a>
+            <a href="#servicos" onclick="toggleMenu()">Planos</a>
+            <a href="#depoimentos" onclick="toggleMenu()">Resultados</a>
             <a href="ferramenta.html" class="btn-nav">Diagnóstico Grátis</a>
         </div>
+    </nav>
     </nav>
 
     <section class="hero animate-up">
